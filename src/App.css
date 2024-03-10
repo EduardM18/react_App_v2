@@ -100,3 +100,62 @@ header{
   cursor: pointer;
   color:rgba(255, 255, 255, 0.3);
 }
+main{
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+  height:810px;
+  margin-top:70px;
+}
+#design_studio_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height:100%;
+  width:50%;
+}
+#design_studio_content_container{
+  display: flex;
+  text-align:right;
+  justify-content:flex-end;
+  width:100%;
+  font-size:93.8px;
+  font-weight:500;
+  line-height:103.68px;
+  color:white;
+}
+#rotated_content_container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap:40px;
+  width:130%;
+  height:54px;
+  margin-top:60px;
+  z-index:1;
+  transform: scaleY(-1);
+}
+#content_arrow_img{
+  width:40px;
+  height:39px;
+  transform: scaleY(-1);
+}
+#rotated_content_p{
+  font-size:19px;
+  font-weight:400;
+  line-height:30px;
+  color:rgba(255, 255, 255, 0.6);
+}
+#main_img_container{
+  width:1008px;
+  height:100%;
+}
+#main_img{
+  width:100%;
+  height:100%;
+}
