@@ -9,6 +9,48 @@ import sponsor2 from "./media/sponsors_logo/logo-coinbase.svg.png";
 import sponsor3 from "./media/sponsors_logo/logo-a16z.png.png";
 import sponsor4 from "./media/sponsors_logo/logo-blockchange.svg.png";
 
+const sections = [
+  {
+    id: 1,
+    name: "Home",
+    messages_count: 0
+  },
+  {
+    id: 2,
+    name: "About",
+    messages_count: 0
+  },
+  {
+    id: 3,
+    name: "Contact",
+    messages_count: 0
+  },
+  {
+    id: 4,
+    name: "Career",
+    messages_count: 2
+  }
+];
+
+const sponsors = [
+  {
+    id: 1,
+    logo: sponsor1
+  },
+  {
+    id: 2,
+    logo: sponsor2
+  },
+  {
+    id: 3,
+    logo: sponsor3
+  },
+  {
+    id: 4,
+    logo: sponsor4
+  }
+]
+
 class App extends React.Component{
   render(){
     return(
@@ -18,19 +60,35 @@ class App extends React.Component{
                 <img src = {logo} alt="logo" id="logo_img"/>
             </div>
             <div id="sections_container">
-                <div className="section_wrapper">
-                    <p className="section_p" id="current_section_p">Home</p>
-                </div>
-                <div className="section_wrapper">
-                    <p className="section_p">About</p>
-                </div>
-                <div className="section_wrapper">
-                    <p className="section_p">Contact</p>
-                </div>
-                <div className="section_wrapper">
-                    <p className="section_p">Career</p>
-                    <div className="section_message">2</div>
-                </div>
+                {sections.map((section) => {
+                  if(section.messages_count < 1){
+                    if(section.name !== "Home"){
+                      return(<div className="section_wrapper" key={`section:${section.id}`}>
+                        <p className="section_p">{section.name}</p>
+                      </div>);
+                    }else{
+                      return(<div className="section_wrapper" key={`section:${section.id}`}>
+                        <p className="section_p" id="current_section_p">{section.name}</p>
+                      </div>);
+                    }
+                  }else{
+                    if(section.name !== "Home"){
+                      return(
+                        <div className="section_wrapper" key={`section:${section.id}`}>
+                          <p className="section_p">{section.name}</p>
+                          <div className="section_message">{section.messages_count}</div>
+                        </div>
+                      )
+                    }else{
+                      return(
+                        <div className="section_wrapper" key={`section:${section.id}`}>
+                          <p className="section_p" id="current_section_p">{section.name}</p>
+                          <div className="section_message">{section.messages_count}</div>
+                        </div>
+                      )
+                    }
+                  }
+                })}
             </div>
             <div id="menu_container">
                 <div id="menu_p">Menu</div>
@@ -56,23 +114,20 @@ class App extends React.Component{
         <footer>
             <p id="backed_by">Our clients are backed by:</p>
             <div id="companies_container">
-                <div className="companie_logo_container">
-                    <img src={sponsor1} alt="companie" className="companie_logo"/>
-                </div>
-                <div className="companie_logo_container">
-                    <img src={sponsor2} alt="companie" className="companie_logo"/>
-                </div>
-                <div className="companie_logo_container">
-                    <img src={sponsor3} alt="companie" className="companie_logo"/>
-                </div>
-                <div className="companie_logo_container">
-                    <img src={sponsor4} alt="companie" className="companie_logo"/>
-                </div>
+              {sponsors.map((sponsor) => {
+                return(
+                  <div className="companie_logo_container" key={`sponsor:${sponsor.id}`}>
+                    <img src={sponsor.logo} alt="companie" className="companie_logo"/>
+                  </div>
+                );
+              })}
             </div>
         </footer>
       </>
     );
   }
 }
+
+<App sections={sections} sponsors={sponsors}/>
 
 export default App;
