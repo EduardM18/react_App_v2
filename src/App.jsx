@@ -11,24 +11,28 @@ import sponsor4 from "./media/sponsors_logo/logo-blockchange.svg.png";
 
 const sections = [
     {
-      id: 1,
-      name: "Home",
-      messages_count: 0
+        id: 1,
+        name: "Home",
+        messages_count: 0,
+        current: true
     },
     {
-      id: 2,
-      name: "About",
-      messages_count: 0
+        id: 2,
+        name: "About",
+        messages_count: 0,
+        current: false
     },
     {
-      id: 3,
-      name: "Contact",
-      messages_count: 0
+        id: 3,
+        name: "Contact",
+        messages_count: 0,
+        current: false
     },
     {
-      id: 4,
-      name: "Career",
-      messages_count: 2
+        id: 4,
+        name: "Career",
+        messages_count: 2,
+        current: false
     }
   ];
   

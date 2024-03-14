@@ -13,32 +13,34 @@ class Header extends React.Component{
                     </div>
                     <div id="sections_container">
                         {sections.map((section) => {
-                            if(section.messages_count < 1){
-                            if(section.name !== "Home"){
-                                return(<div className="section_wrapper" key={`section:${section.id}`}>
-                                <p className="section_p">{section.name}</p>
-                                </div>);
-                            }else{
-                                return(<div className="section_wrapper" key={`section:${section.id}`}>
-                                <p className="section_p" id="current_section_p">{section.name}</p>
-                                </div>);
-                            }
-                            }else{
-                            if(section.name !== "Home"){
+                            if(section.current === true){
+                                if(section.messages_count > 0){
+                                    return(
+                                        <div className="section_wrapper" key={`section:${section.id}`}>
+                                            <p className="section_p" id="current_section_p">{section.name}</p>
+                                            <div className="section_message">{section.messages_count}</div>
+                                        </div>
+                                    )
+                                }
                                 return(
-                                <div className="section_wrapper" key={`section:${section.id}`}>
-                                    <p className="section_p">{section.name}</p>
-                                    <div className="section_message">{section.messages_count}</div>
-                                </div>
-                                )
-                            }else{
-                                return(
-                                <div className="section_wrapper" key={`section:${section.id}`}>
+                                    <div className="section_wrapper" key={`section:${section.id}`}>
                                     <p className="section_p" id="current_section_p">{section.name}</p>
-                                    <div className="section_message">{section.messages_count}</div>
-                                </div>
-                                )
-                            }
+                                    </div>
+                                );
+                            }else{
+                                if(section.messages_count > 0){
+                                    return(
+                                        <div className="section_wrapper" key={`section:${section.id}`}>
+                                            <p className="section_p">{section.name}</p>
+                                            <div className="section_message">{section.messages_count}</div>
+                                        </div>
+                                    )
+                                }
+                                return(
+                                    <div className="section_wrapper" key={`section:${section.id}`}>
+                                    <p className="section_p">{section.name}</p>
+                                    </div>
+                                );
                             }
                         })}
                     </div>
