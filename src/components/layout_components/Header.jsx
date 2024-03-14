@@ -51,7 +51,5 @@ class Header extends React.Component{
         );
     }
 }
-  
-<Header />
 
 export default Header;

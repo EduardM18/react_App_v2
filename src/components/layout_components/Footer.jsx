@@ -21,8 +21,6 @@ class Footer extends React.Component{
         );
     }
 }
-  
-<Footer />
 
 export default Footer;
   

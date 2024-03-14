@@ -26,8 +26,6 @@ class Main extends React.Component{
         );
     }
 }
-  
-<Main />
 
 export default Main;
   
