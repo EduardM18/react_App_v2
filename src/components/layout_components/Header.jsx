@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from "./media/logo/logo.svg.png";
-import menu_svg from "./media/icons/menu.svg.png";
+import logo from "../../media/logo/logo.svg.png";
+import menu_svg from "../../media/icons/menu.svg.png";
 
 class Header extends React.Component{
     render(){

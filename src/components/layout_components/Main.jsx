@@ -1,6 +1,6 @@
 import React from 'react';
-import arrow_icon from "./media/icons/arrow-bottom.svg.png";
-import main_img from "./media/images/div.png";
+import arrow_icon from "../../media/icons/arrow-bottom.svg.png";
+import main_img from "../../media/images/div.png";
 
 class Main extends React.Component{
     render(){
