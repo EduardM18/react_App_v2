@@ -7,8 +7,6 @@ import sponsor2 from "./media/sponsors_logo/logo-coinbase.svg.png";
 import sponsor3 from "./media/sponsors_logo/logo-a16z.png.png";
 import sponsor4 from "./media/sponsors_logo/logo-blockchange.svg.png";
 
-
-
 const sections = [
     {
         id: 1,
@@ -34,9 +32,9 @@ const sections = [
         messages_count: 2,
         current: false
     }
-  ];
+];
   
-  const sponsors = [
+const sponsors = [
     {
       id: 1,
       logo: sponsor1
@@ -53,7 +51,7 @@ const sections = [
       id: 4,
       logo: sponsor4
     }
-  ]
+]
 
 class App extends React.Component{
     render(){
