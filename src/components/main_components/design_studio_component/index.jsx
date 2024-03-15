@@ -3,7 +3,7 @@ import arrow_icon from "../../../media/icons/arrow-bottom.svg.png";
 import main_img from "../../../media/images/div.png";
 import "./style.css"
 
-class DesignStudio extends React.Component{
+class Design extends React.Component{
     render(){
         return(
             <> 
@@ -28,5 +28,5 @@ class DesignStudio extends React.Component{
     }
 }
 
-export default DesignStudio;
+export default Design;
   
