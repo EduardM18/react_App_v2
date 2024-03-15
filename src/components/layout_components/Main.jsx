@@ -7,6 +7,7 @@ import project5 from "../../media/projects/project5.jpg";
 import field1 from "../../media/fields/field1.jpg";
 import background_gif from "../../media/gifs/stoepsorama.gif";
 import DesignStudio from '../main_components/design_studio_component/index';
+import Sponsors from '../main_components/sponsors_component';
 
 class Main extends React.Component{
     render(){
@@ -15,18 +16,7 @@ class Main extends React.Component{
             <>
                 <main>
                     <DesignStudio />
-                    <div id="sponsors_container">
-                        <p id="backed_by">Our clients are backed by:</p>
-                        <div id="companies_container">
-                            {sponsors.map((sponsor) => {
-                                return(
-                                    <div className="companie_logo_container" key={`sponsor:${sponsor.id}`}>
-                                    <img src={sponsor.logo} alt="companie" className="companie_logo"/>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
+                    <Sponsors sponsors = {sponsors} />
                     <div id="projects_container">
                     <h1 id="projects_container_header">Projects</h1>
                     <div id="projects_grid_container">
